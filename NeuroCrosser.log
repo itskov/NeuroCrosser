@@ -1,0 +1,566 @@
+2018-08-07 16:10:45,233 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:10:46,932 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:09,750 INFO  [root:91][waitress] Cells:[{u'text': u'AWAR'}, {u'text': u'AWCR'}]
+2018-08-07 16:11:10,737 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:10,738 INFO  [root:91][waitress] Cells:[{u'text': u'AWAR'}, {u'text': u'ASEL'}]
+2018-08-07 16:11:12,392 INFO  [root:91][waitress] Cells:[{u'text': u'AWAR'}]
+2018-08-07 16:11:16,514 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:16,515 ERROR [waitress:341][waitress] Exception when serving /fetchGO
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/waitress/channel.py", line 338, in service
+    task.service()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 169, in service
+    self.execute()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 399, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 223, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 198, in invoke_subrequest
+    response = handle_request(request)
+  File "/usr/local/lib/python2.7/dist-packages/pyramid_debugtoolbar/toolbar.py", line 213, in toolbar_tween
+    return handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/tweens.py", line 20, in excview_tween
+    response = handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 145, in handle_request
+    view_name
+  File "/usr/lib/python2.7/dist-packages/pyramid/view.py", line 541, in _call_view
+    response = view_callable(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 353, in rendered_view
+    result = view(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 483, in _class_requestonly_view
+    response = getattr(inst, attr)()
+  File "/home/itskov/Dropbox/workspace/lab/NeuroCrosser/MainApp/views.py", line 65, in fetchGO
+    logger.info("Requesting GO for: " + geneName)
+NameError: global name 'logger' is not defined
+2018-08-07 16:11:17,010 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:17,011 ERROR [waitress:341][waitress] Exception when serving /fetchGO
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/waitress/channel.py", line 338, in service
+    task.service()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 169, in service
+    self.execute()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 399, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 223, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 198, in invoke_subrequest
+    response = handle_request(request)
+  File "/usr/local/lib/python2.7/dist-packages/pyramid_debugtoolbar/toolbar.py", line 213, in toolbar_tween
+    return handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/tweens.py", line 20, in excview_tween
+    response = handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 145, in handle_request
+    view_name
+  File "/usr/lib/python2.7/dist-packages/pyramid/view.py", line 541, in _call_view
+    response = view_callable(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 353, in rendered_view
+    result = view(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 483, in _class_requestonly_view
+    response = getattr(inst, attr)()
+  File "/home/itskov/Dropbox/workspace/lab/NeuroCrosser/MainApp/views.py", line 65, in fetchGO
+    logger.info("Requesting GO for: " + geneName)
+NameError: global name 'logger' is not defined
+2018-08-07 16:11:17,663 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:17,663 ERROR [waitress:341][waitress] Exception when serving /fetchGO
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/waitress/channel.py", line 338, in service
+    task.service()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 169, in service
+    self.execute()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 399, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 223, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 198, in invoke_subrequest
+    response = handle_request(request)
+  File "/usr/local/lib/python2.7/dist-packages/pyramid_debugtoolbar/toolbar.py", line 213, in toolbar_tween
+    return handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/tweens.py", line 20, in excview_tween
+    response = handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 145, in handle_request
+    view_name
+  File "/usr/lib/python2.7/dist-packages/pyramid/view.py", line 541, in _call_view
+    response = view_callable(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 353, in rendered_view
+    result = view(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 483, in _class_requestonly_view
+    response = getattr(inst, attr)()
+  File "/home/itskov/Dropbox/workspace/lab/NeuroCrosser/MainApp/views.py", line 65, in fetchGO
+    logger.info("Requesting GO for: " + geneName)
+NameError: global name 'logger' is not defined
+2018-08-07 16:11:20,487 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:20,487 ERROR [waitress:341][waitress] Exception when serving /fetchGO
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/waitress/channel.py", line 338, in service
+    task.service()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 169, in service
+    self.execute()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 399, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 223, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 198, in invoke_subrequest
+    response = handle_request(request)
+  File "/usr/local/lib/python2.7/dist-packages/pyramid_debugtoolbar/toolbar.py", line 213, in toolbar_tween
+    return handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/tweens.py", line 20, in excview_tween
+    response = handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 145, in handle_request
+    view_name
+  File "/usr/lib/python2.7/dist-packages/pyramid/view.py", line 541, in _call_view
+    response = view_callable(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 353, in rendered_view
+    result = view(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 483, in _class_requestonly_view
+    response = getattr(inst, attr)()
+  File "/home/itskov/Dropbox/workspace/lab/NeuroCrosser/MainApp/views.py", line 65, in fetchGO
+    logger.info("Requesting GO for: " + geneName)
+NameError: global name 'logger' is not defined
+2018-08-07 16:11:21,889 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:21,890 ERROR [waitress:341][waitress] Exception when serving /fetchGO
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/waitress/channel.py", line 338, in service
+    task.service()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 169, in service
+    self.execute()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 399, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 223, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 198, in invoke_subrequest
+    response = handle_request(request)
+  File "/usr/local/lib/python2.7/dist-packages/pyramid_debugtoolbar/toolbar.py", line 213, in toolbar_tween
+    return handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/tweens.py", line 20, in excview_tween
+    response = handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 145, in handle_request
+    view_name
+  File "/usr/lib/python2.7/dist-packages/pyramid/view.py", line 541, in _call_view
+    response = view_callable(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 353, in rendered_view
+    result = view(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 483, in _class_requestonly_view
+    response = getattr(inst, attr)()
+  File "/home/itskov/Dropbox/workspace/lab/NeuroCrosser/MainApp/views.py", line 65, in fetchGO
+    logger.info("Requesting GO for: " + geneName)
+NameError: global name 'logger' is not defined
+2018-08-07 16:11:22,477 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:22,478 ERROR [waitress:341][waitress] Exception when serving /fetchGO
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/waitress/channel.py", line 338, in service
+    task.service()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 169, in service
+    self.execute()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 399, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 223, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 198, in invoke_subrequest
+    response = handle_request(request)
+  File "/usr/local/lib/python2.7/dist-packages/pyramid_debugtoolbar/toolbar.py", line 213, in toolbar_tween
+    return handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/tweens.py", line 20, in excview_tween
+    response = handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 145, in handle_request
+    view_name
+  File "/usr/lib/python2.7/dist-packages/pyramid/view.py", line 541, in _call_view
+    response = view_callable(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 353, in rendered_view
+    result = view(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 483, in _class_requestonly_view
+    response = getattr(inst, attr)()
+  File "/home/itskov/Dropbox/workspace/lab/NeuroCrosser/MainApp/views.py", line 65, in fetchGO
+    logger.info("Requesting GO for: " + geneName)
+NameError: global name 'logger' is not defined
+2018-08-07 16:11:22,873 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:22,874 ERROR [waitress:341][waitress] Exception when serving /fetchGO
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/waitress/channel.py", line 338, in service
+    task.service()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 169, in service
+    self.execute()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 399, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 223, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 198, in invoke_subrequest
+    response = handle_request(request)
+  File "/usr/local/lib/python2.7/dist-packages/pyramid_debugtoolbar/toolbar.py", line 213, in toolbar_tween
+    return handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/tweens.py", line 20, in excview_tween
+    response = handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 145, in handle_request
+    view_name
+  File "/usr/lib/python2.7/dist-packages/pyramid/view.py", line 541, in _call_view
+    response = view_callable(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 353, in rendered_view
+    result = view(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 483, in _class_requestonly_view
+    response = getattr(inst, attr)()
+  File "/home/itskov/Dropbox/workspace/lab/NeuroCrosser/MainApp/views.py", line 65, in fetchGO
+    logger.info("Requesting GO for: " + geneName)
+NameError: global name 'logger' is not defined
+2018-08-07 16:11:23,201 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:23,202 ERROR [waitress:341][waitress] Exception when serving /fetchGO
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/waitress/channel.py", line 338, in service
+    task.service()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 169, in service
+    self.execute()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 399, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 223, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 198, in invoke_subrequest
+    response = handle_request(request)
+  File "/usr/local/lib/python2.7/dist-packages/pyramid_debugtoolbar/toolbar.py", line 213, in toolbar_tween
+    return handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/tweens.py", line 20, in excview_tween
+    response = handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 145, in handle_request
+    view_name
+  File "/usr/lib/python2.7/dist-packages/pyramid/view.py", line 541, in _call_view
+    response = view_callable(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 353, in rendered_view
+    result = view(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 483, in _class_requestonly_view
+    response = getattr(inst, attr)()
+  File "/home/itskov/Dropbox/workspace/lab/NeuroCrosser/MainApp/views.py", line 65, in fetchGO
+    logger.info("Requesting GO for: " + geneName)
+NameError: global name 'logger' is not defined
+2018-08-07 16:11:23,513 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:23,514 ERROR [waitress:341][waitress] Exception when serving /fetchGO
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/waitress/channel.py", line 338, in service
+    task.service()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 169, in service
+    self.execute()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 399, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 223, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 198, in invoke_subrequest
+    response = handle_request(request)
+  File "/usr/local/lib/python2.7/dist-packages/pyramid_debugtoolbar/toolbar.py", line 213, in toolbar_tween
+    return handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/tweens.py", line 20, in excview_tween
+    response = handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 145, in handle_request
+    view_name
+  File "/usr/lib/python2.7/dist-packages/pyramid/view.py", line 541, in _call_view
+    response = view_callable(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 353, in rendered_view
+    result = view(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 483, in _class_requestonly_view
+    response = getattr(inst, attr)()
+  File "/home/itskov/Dropbox/workspace/lab/NeuroCrosser/MainApp/views.py", line 65, in fetchGO
+    logger.info("Requesting GO for: " + geneName)
+NameError: global name 'logger' is not defined
+2018-08-07 16:11:24,050 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:24,050 ERROR [waitress:341][waitress] Exception when serving /fetchGO
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/waitress/channel.py", line 338, in service
+    task.service()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 169, in service
+    self.execute()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 399, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 223, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 198, in invoke_subrequest
+    response = handle_request(request)
+  File "/usr/local/lib/python2.7/dist-packages/pyramid_debugtoolbar/toolbar.py", line 213, in toolbar_tween
+    return handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/tweens.py", line 20, in excview_tween
+    response = handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 145, in handle_request
+    view_name
+  File "/usr/lib/python2.7/dist-packages/pyramid/view.py", line 541, in _call_view
+    response = view_callable(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 353, in rendered_view
+    result = view(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 483, in _class_requestonly_view
+    response = getattr(inst, attr)()
+  File "/home/itskov/Dropbox/workspace/lab/NeuroCrosser/MainApp/views.py", line 65, in fetchGO
+    logger.info("Requesting GO for: " + geneName)
+NameError: global name 'logger' is not defined
+2018-08-07 16:11:24,825 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:24,825 ERROR [waitress:341][waitress] Exception when serving /fetchGO
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/waitress/channel.py", line 338, in service
+    task.service()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 169, in service
+    self.execute()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 399, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 223, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 198, in invoke_subrequest
+    response = handle_request(request)
+  File "/usr/local/lib/python2.7/dist-packages/pyramid_debugtoolbar/toolbar.py", line 213, in toolbar_tween
+    return handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/tweens.py", line 20, in excview_tween
+    response = handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 145, in handle_request
+    view_name
+  File "/usr/lib/python2.7/dist-packages/pyramid/view.py", line 541, in _call_view
+    response = view_callable(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 353, in rendered_view
+    result = view(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 483, in _class_requestonly_view
+    response = getattr(inst, attr)()
+  File "/home/itskov/Dropbox/workspace/lab/NeuroCrosser/MainApp/views.py", line 65, in fetchGO
+    logger.info("Requesting GO for: " + geneName)
+NameError: global name 'logger' is not defined
+2018-08-07 16:11:26,222 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:26,223 ERROR [waitress:341][waitress] Exception when serving /fetchGO
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/waitress/channel.py", line 338, in service
+    task.service()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 169, in service
+    self.execute()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 399, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 223, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 198, in invoke_subrequest
+    response = handle_request(request)
+  File "/usr/local/lib/python2.7/dist-packages/pyramid_debugtoolbar/toolbar.py", line 213, in toolbar_tween
+    return handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/tweens.py", line 20, in excview_tween
+    response = handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 145, in handle_request
+    view_name
+  File "/usr/lib/python2.7/dist-packages/pyramid/view.py", line 541, in _call_view
+    response = view_callable(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 353, in rendered_view
+    result = view(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 483, in _class_requestonly_view
+    response = getattr(inst, attr)()
+  File "/home/itskov/Dropbox/workspace/lab/NeuroCrosser/MainApp/views.py", line 65, in fetchGO
+    logger.info("Requesting GO for: " + geneName)
+NameError: global name 'logger' is not defined
+2018-08-07 16:11:26,617 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:26,618 ERROR [waitress:341][waitress] Exception when serving /fetchGO
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/waitress/channel.py", line 338, in service
+    task.service()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 169, in service
+    self.execute()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 399, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 223, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 198, in invoke_subrequest
+    response = handle_request(request)
+  File "/usr/local/lib/python2.7/dist-packages/pyramid_debugtoolbar/toolbar.py", line 213, in toolbar_tween
+    return handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/tweens.py", line 20, in excview_tween
+    response = handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 145, in handle_request
+    view_name
+  File "/usr/lib/python2.7/dist-packages/pyramid/view.py", line 541, in _call_view
+    response = view_callable(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 353, in rendered_view
+    result = view(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 483, in _class_requestonly_view
+    response = getattr(inst, attr)()
+  File "/home/itskov/Dropbox/workspace/lab/NeuroCrosser/MainApp/views.py", line 65, in fetchGO
+    logger.info("Requesting GO for: " + geneName)
+NameError: global name 'logger' is not defined
+2018-08-07 16:11:26,982 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:26,982 ERROR [waitress:341][waitress] Exception when serving /fetchGO
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/waitress/channel.py", line 338, in service
+    task.service()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 169, in service
+    self.execute()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 399, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 223, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 198, in invoke_subrequest
+    response = handle_request(request)
+  File "/usr/local/lib/python2.7/dist-packages/pyramid_debugtoolbar/toolbar.py", line 213, in toolbar_tween
+    return handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/tweens.py", line 20, in excview_tween
+    response = handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 145, in handle_request
+    view_name
+  File "/usr/lib/python2.7/dist-packages/pyramid/view.py", line 541, in _call_view
+    response = view_callable(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 353, in rendered_view
+    result = view(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 483, in _class_requestonly_view
+    response = getattr(inst, attr)()
+  File "/home/itskov/Dropbox/workspace/lab/NeuroCrosser/MainApp/views.py", line 65, in fetchGO
+    logger.info("Requesting GO for: " + geneName)
+NameError: global name 'logger' is not defined
+2018-08-07 16:11:27,441 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:27,442 ERROR [waitress:341][waitress] Exception when serving /fetchGO
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/waitress/channel.py", line 338, in service
+    task.service()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 169, in service
+    self.execute()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 399, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 223, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 198, in invoke_subrequest
+    response = handle_request(request)
+  File "/usr/local/lib/python2.7/dist-packages/pyramid_debugtoolbar/toolbar.py", line 213, in toolbar_tween
+    return handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/tweens.py", line 20, in excview_tween
+    response = handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 145, in handle_request
+    view_name
+  File "/usr/lib/python2.7/dist-packages/pyramid/view.py", line 541, in _call_view
+    response = view_callable(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 353, in rendered_view
+    result = view(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 483, in _class_requestonly_view
+    response = getattr(inst, attr)()
+  File "/home/itskov/Dropbox/workspace/lab/NeuroCrosser/MainApp/views.py", line 65, in fetchGO
+    logger.info("Requesting GO for: " + geneName)
+NameError: global name 'logger' is not defined
+2018-08-07 16:11:29,489 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:29,490 ERROR [waitress:341][waitress] Exception when serving /fetchGO
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/waitress/channel.py", line 338, in service
+    task.service()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 169, in service
+    self.execute()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 399, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 223, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 198, in invoke_subrequest
+    response = handle_request(request)
+  File "/usr/local/lib/python2.7/dist-packages/pyramid_debugtoolbar/toolbar.py", line 213, in toolbar_tween
+    return handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/tweens.py", line 20, in excview_tween
+    response = handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 145, in handle_request
+    view_name
+  File "/usr/lib/python2.7/dist-packages/pyramid/view.py", line 541, in _call_view
+    response = view_callable(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 353, in rendered_view
+    result = view(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 483, in _class_requestonly_view
+    response = getattr(inst, attr)()
+  File "/home/itskov/Dropbox/workspace/lab/NeuroCrosser/MainApp/views.py", line 65, in fetchGO
+    logger.info("Requesting GO for: " + geneName)
+NameError: global name 'logger' is not defined
+2018-08-07 16:11:29,764 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:29,765 ERROR [waitress:341][waitress] Exception when serving /fetchGO
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/waitress/channel.py", line 338, in service
+    task.service()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 169, in service
+    self.execute()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 399, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 223, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 198, in invoke_subrequest
+    response = handle_request(request)
+  File "/usr/local/lib/python2.7/dist-packages/pyramid_debugtoolbar/toolbar.py", line 213, in toolbar_tween
+    return handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/tweens.py", line 20, in excview_tween
+    response = handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 145, in handle_request
+    view_name
+  File "/usr/lib/python2.7/dist-packages/pyramid/view.py", line 541, in _call_view
+    response = view_callable(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 353, in rendered_view
+    result = view(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 483, in _class_requestonly_view
+    response = getattr(inst, attr)()
+  File "/home/itskov/Dropbox/workspace/lab/NeuroCrosser/MainApp/views.py", line 65, in fetchGO
+    logger.info("Requesting GO for: " + geneName)
+NameError: global name 'logger' is not defined
+2018-08-07 16:11:30,147 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:11:30,148 ERROR [waitress:341][waitress] Exception when serving /fetchGO
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/waitress/channel.py", line 338, in service
+    task.service()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 169, in service
+    self.execute()
+  File "/usr/lib/python2.7/dist-packages/waitress/task.py", line 399, in execute
+    app_iter = self.channel.server.application(env, start_response)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 223, in __call__
+    response = self.invoke_subrequest(request, use_tweens=True)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 198, in invoke_subrequest
+    response = handle_request(request)
+  File "/usr/local/lib/python2.7/dist-packages/pyramid_debugtoolbar/toolbar.py", line 213, in toolbar_tween
+    return handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/tweens.py", line 20, in excview_tween
+    response = handler(request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/router.py", line 145, in handle_request
+    view_name
+  File "/usr/lib/python2.7/dist-packages/pyramid/view.py", line 541, in _call_view
+    response = view_callable(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 353, in rendered_view
+    result = view(context, request)
+  File "/usr/lib/python2.7/dist-packages/pyramid/config/views.py", line 483, in _class_requestonly_view
+    response = getattr(inst, attr)()
+  File "/home/itskov/Dropbox/workspace/lab/NeuroCrosser/MainApp/views.py", line 65, in fetchGO
+    logger.info("Requesting GO for: " + geneName)
+NameError: global name 'logger' is not defined
+2018-08-07 16:12:01,104 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:12:01,645 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:12:30,018 INFO  [root:65][waitress] Requesting GO for: spin-3
+2018-08-07 16:12:30,211 INFO  [root:65][waitress] Requesting GO for: odr-7
+2018-08-07 16:12:31,256 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:12:31,257 INFO  [root:65][waitress] Requesting GO for: kin-29
+2018-08-07 16:12:31,899 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:12:31,900 INFO  [root:65][waitress] Requesting GO for: odr-3
+2018-08-07 16:12:32,769 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:12:32,770 INFO  [root:65][waitress] Requesting GO for: kin-29
+2018-08-07 16:12:34,931 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:12:34,931 INFO  [root:65][waitress] Requesting GO for: odr-7
+2018-08-07 16:12:36,297 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:12:36,298 INFO  [root:65][waitress] Requesting GO for: ocr-2
+2018-08-07 16:13:19,994 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:13:48,037 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:13:57,343 INFO  [root:65][waitress] Requesting GO for: arr-1
+2018-08-07 16:13:59,844 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:13:59,844 INFO  [root:65][waitress] Requesting GO for: ocr-1
+2018-08-07 16:14:00,485 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:14:00,486 INFO  [root:65][waitress] Requesting GO for: daf-2
+2018-08-07 16:14:01,194 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:14:01,195 INFO  [root:65][waitress] Requesting GO for: arr-1
+2018-08-07 16:14:06,312 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:14:06,313 INFO  [root:91][waitress] Cells:[{u'text': u'AWAR'}, {u'text': u'AWAL'}, {u'text': u'AWCR'}, {u'text': u'AWCL'}]
+2018-08-07 16:14:14,749 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:14:14,749 INFO  [root:91][waitress] Cells:[{u'text': u'AWAR'}, {u'text': u'AWAL'}, {u'text': u'AWCR'}, {u'text': u'AWCL'}, {u'text': u'AIBL'}]
+2018-08-07 16:14:18,251 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:14:18,251 INFO  [root:91][waitress] Cells:[{u'text': u'AWAR'}, {u'text': u'AWAL'}, {u'text': u'AWCR'}, {u'text': u'AWCL'}]
+2018-08-07 16:14:18,899 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:14:18,899 INFO  [root:91][waitress] Cells:[{u'text': u'AWAR'}, {u'text': u'AWAL'}, {u'text': u'AWCR'}]
+2018-08-07 16:14:19,804 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:14:19,804 INFO  [root:91][waitress] Cells:[{u'text': u'AWAR'}, {u'text': u'AWAL'}]
+2018-08-07 16:14:20,785 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:14:20,785 INFO  [root:91][waitress] Cells:[{u'text': u'AWAR'}]
+2018-08-07 16:14:22,184 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:14:22,185 INFO  [root:91][waitress] Cells:[]
+2018-08-07 16:16:08,430 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:16:17,450 INFO  [root:95][waitress] Cells:[u'AWAR']
+2018-08-07 16:16:22,025 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:16:22,026 INFO  [root:95][waitress] Cells:[u'AWAR', u'AWAL']
+2018-08-07 16:16:31,495 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:16:31,496 INFO  [root:95][waitress] Cells:[u'AWAR', u'AWAL', u'AWCR']
+2018-08-07 16:16:35,082 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:16:35,082 INFO  [root:95][waitress] Cells:[u'AWAR', u'AWAL', u'AWCR', u'AWCL']
+2018-08-07 16:17:45,672 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:17:55,468 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:17:55,469 INFO  [root:95][waitress] Cells:[u'AWAR', u'AWAL', u'AWCR', u'AWCL']
+2018-08-07 16:18:05,787 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:18:05,787 INFO  [root:65][waitress] Requesting GO for: K07C11.10
+2018-08-07 16:18:06,486 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:18:06,487 INFO  [root:65][waitress] Requesting GO for: pkc-1
+2018-08-07 16:18:07,133 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:18:07,134 INFO  [root:65][waitress] Requesting GO for: ncs-1
+2018-08-07 16:18:07,876 INFO  [root:28][waitress] Starting Session.
+2018-08-07 16:18:07,877 INFO  [root:65][waitress] Requesting GO for: odr-3

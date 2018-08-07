@@ -1,0 +1,7 @@
+setup.py
+NeuroCrosser.egg-info/PKG-INFO
+NeuroCrosser.egg-info/SOURCES.txt
+NeuroCrosser.egg-info/dependency_links.txt
+NeuroCrosser.egg-info/entry_points.txt
+NeuroCrosser.egg-info/requires.txt
+NeuroCrosser.egg-info/top_level.txt

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Loading Angular -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+<!-- Loading the term search box -->
+<script src="http://mbenford.github.io/ngTagsInput/js/ng-tags-input.min.js"></script>
+
+<!-- Term searchbox style sheet -->
+<link rel="stylesheet" href="http://mbenford.github.io/ngTagsInput/css/ng-tags-input.min.css" />
+
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+
+<style>
+tr.pure-table-odd:hover {
+	border: 1px solid blue
+}
+tr.pure-table-even:hover {
+	border: 1px solid blue
+}
+
+
+.footer {
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   width: 30%;
+   height: 2.5%;
+   font-size: x-small;
+   background-color:lightblue;
+   color: white;
+   text-align: center;
+   opacity:0.85;
+   color:black;
+}
+
+</style>
+
+<body ng-app="mainApp" ng-controller="MyCtrl">
+	<tags-input ng-model="tags" on-tag-added="update($tag)" on-tag-adding="checkCase($tag)"
+		    on-tag-removed="update($tag)" add-on-space="True" add-On-Comma="True">
+		<auto-complete source="loadTags($query)" min-length="2"></auto-complete>
+	</tags-input>
+
+
+<! -- Table -- >
+<table style="table-layout: fixed; width: 100%;">
+<tr><td style="width: 70%;vertical-align:top;">
+<table class="pure-table" style="table-layout: fixed; width: 100%;">
+<tr>
+<th style="width:10%">Name</th>
+<th>Expressed also in</th>
+</tr>
+
+<tr ng-repeat="g in genes" ng-class-odd="'pure-table-odd'" ng-class-even="'pure-table-even'" ng-click="fetchGO(g.Name)">
+<td style="width:10%" >{{$index + 1}}. <a href="http://www.wormbase.org/species/c_elegans/gene/{{ g.Name }}">{{ g.Name }}</a></td>
+<td style="word-wrap: break-word">{{ g.AlsoIn }}</td>
+</tr>
+</table>
+</td>
+<td style="vertical-align:top;">
+<table class="pure-table-bordered" style="table-layout: fixed; width: 100%;">
+<tr>
+<th style="width:50%">{{ currentGene }} GO Desc</th>
+<th style="width:50%;">{{ currentGene }} GO ID</th>
+</tr>
+<tr ng-repeat="go in gos">
+	<td>{{go.Name}}</td>
+	<td style="text-align:center">{{go.GOId}}</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<script>
+app = angular.module('mainApp', ['ngTagsInput']);
+app.controller('MyCtrl', function($scope, $http) {
+          $scope.tags = [
+            { text: 'AWAR' },
+            { text: 'AWAL' },
+	    { text: 'AWCR' },
+	    { text: 'AWCL'}];
+
+	  $scope.update = function() { 
+	       $http.post('/overlap',$scope.tags)
+			.then( function (response) { $scope.genes = response.data; } );
+
+          };
+
+	  $scope.fetchGO = function($geneName) {
+		$http.post('/fetchGO', $geneName)
+			.then(function(response) { $scope.gos = response.data; });
+
+		$scope.currentGene = $geneName
+	  };
+
+	  $scope.gos = [];
+	  
+	  $scope.currentGene = "";
+
+	  $scope.update()
+
+	  $scope.neuronNames = [{text: 'PVQL'}, {text: 'IL2DL'}, {text: 'VC2'}, {text: 'SAADR'}, {text: 'R9BR'}, {text: 'DD2'}, {text: 'SIBDR'}, {text: 'V5R'}, {text: 'ASIL'}, {text: 'Z2'}, {text: 'VB5'}, {text: 'SPC'}, {text: 'VA11'}, {text: 'DVC'}, {text: 'SPDL'}, {text: 'DVA'}, {text: 'DD6'}, {text: 'GLRVR'}, {text: 'RMGL'}, {text: 'R7AL'}, {text: 'RIPL'}, {text: 'GLRL'}, {text: 'HOB'}, {text: 'R4AR'}, {text: 'RMDR'}, {text: 'R1'}, {text: 'IL1VR'}, {text: 'RMED'}, {text: 'AVAR'}, {text: 'PVCR'}, {text: 'SMBDL'}, {text: 'DVF'}, {text: 'PVT'}, {text: 'H0L'}, {text: 'ADLR'}, {text: 'RIH'}, {text: 'HSNL'}, {text: 'VD11'}, {text: 'DTC'}, {text: 'DD1'}, {text: 'P9'}, {text: 'VA10'}, {text: 'DA7'}, {text: 'OLLL'}, {text: 'AS8'}, {text: 'EMS'}, {text: 'ADE'}, {text: 'CAN'}, {text: 'SABVL'}, {text: 'SMDDL'}, {text: 'R3BR'}, {text: 'EF2'}, {text: 'LUAR'}, {text: 'AVDL'}, {text: 'DA5'}, {text: 'I2L'}, {text: 'CEP'}, {text: 'P1'}, {text: 'URYVR'}, {text: 'DB5'}, {text: 'I1R'}, {text: 'URADL'}, {text: 'AS10'}, {text: 'RIMR'}, {text: 'SABD'}, {text: 'IL2DR'}, {text: 'AIAR'}, {text: 'MCMR'}, {text: 'PCBL'}, {text: 'ADFR'}, {text: 'URYVL'}, {text: 'SABVR'}, {text: 'D'}, {text: 'AIBL'}, {text: 'PVV'}, {text: 'VB10'}, {text: 'PGA'}, {text: 'G2'}, {text: 'AIMR'}, {text: 'RIS'}, {text: 'VD8'}, {text: 'PVWL'}, {text: 'CA1'}, {text: 'PDA'}, {text: 'GLRDR'}, {text: 'I1L'}, {text: 'AVH'}, {text: 'P2'}, {text: 'RIFR'}, {text: 'AVEL'}, {text: 'ASGR'}, {text: 'NSML'}, {text: 'RMDDL'}, {text: 'VD13'}, {text: 'R6AR'}, {text: 'DB2'}, {text: 'ASEL'}, {text: 'AFDL'}, {text: 'V2R'}, {text: 'RIVL'}, {text: 'SPVR'}, {text: 'OLQVL'}, {text: 'RIFL'}, {text: 'PVR'}, {text: 'G1'}, {text: 'DD3'}, {text: 'P5/6R'}, {text: 'VD12'}, {text: 'URBR'}, {text: 'R2BR'}, {text: 'R9BL'}, {text: 'H0R'}, {text: 'PHCR'}, {text: 'VC3'}, {text: 'H1L'}, {text: 'H2R'}, {text: 'RMDVR'}, {text: 'VB9'}, {text: 'PVDR'}, {text: 'VD2'}, {text: 'ALNL'}, {text: 'AWAR'}, {text: 'SMBVR'}, {text: 'RMHL'}, {text: 'RIGR'}, {text: 'BAGR'}, {text: 'AWCR'}, {text: 'SIBDL'}, {text: 'AVBL'}, {text: 'P3/4R'}, {text: 'RIAL'}, {text: 'R3AR'}, {text: 'AINR'}, {text: 'PVY'}, {text: 'RIPR'}, {text: 'AIZL'}, {text: 'OLL'}, {text: 'VC6'}, {text: 'PVNR'}, {text: 'VB1'}, {text: 'AS2'}, {text: 'RMEV'}, {text: 'ASKR'}, {text: 'P7'}, {text: 'PLNR'}, {text: 'P12'}, {text: 'VB11'}, {text: 'CA2'}, {text: 'BDUL'}, {text: 'PCCR'}, {text: 'ASER'}, {text: 'PVQR'}, {text: 'XXXL'}, {text: 'RMFR'}, {text: 'BDUR'}, {text: 'R8'}, {text: 'DB6'}, {text: 'AS9'}, {text: 'PVZ'}, {text: 'V1R'}, {text: 'V3L'}, {text: 'CEMVL'}, {text: 'AWCL'}, {text: 'R4AL'}, {text: 'C'}, {text: 'P11'}, {text: 'P5'}, {text: 'PLMR'}, {text: 'P10'}, {text: 'AS1'}, {text: 'LUAL'}, {text: 'TL'}, {text: 'AVKL'}, {text: 'DA1'}, {text: 'MS'}, {text: 'RIVR'}, {text: 'SM3R'}, {text: 'AVF'}, {text: 'SIBVL'}, {text: 'R3AL'}, {text: 'VA7'}, {text: 'CANL'}, {text: 'URADR'}, {text: 'PVU'}, {text: 'ASHR'}, {text: 'DVE'}, {text: 'VA4'}, {text: 'URYDR'}, {text: 'CA3'}, {text: 'R8AL'}, {text: 'R6AL'}, {text: 'VB8'}, {text: 'PVX'}, {text: 'IL2VR'}, {text: 'PHAR'}, {text: 'SIAVL'}, {text: 'FLPR'}, {text: 'DA9'}, {text: 'SPCL'}, {text: 'OLLR'}, {text: 'VA5'}, {text: 'RICR'}, {text: 'ASJR'}, {text: 'R2'}, {text: 'URXR'}, {text: 'P3'}, {text: 'PCAR'}, {text: 'MCML'}, {text: 'P0'}, {text: 'VB4'}, {text: 'VC1'}, {text: 'R2BL'}, {text: 'P3/4L'}, {text: 'PLML'}, {text: 'AWA'}, {text: 'CA5'}, {text: 'CP9'}, {text: 'AVAL'}, {text: 'CP6'}, {text: 'R8BR'}, {text: 'AWC-ON'}, {text: 'VA2'}, {text: 'R7AR'}, {text: 'PDEL'}, {text: 'ASKL'}, {text: 'R9AL'}, {text: 'ASHL'}, {text: 'URYDL'}, {text: 'V6L'}, {text: 'AVL'}, {text: 'PCCL'}, {text: 'R5AR'}, {text: 'AS7'}, {text: 'V3R'}, {text: 'DB3'}, {text: 'PDC'}, {text: 'IL1L'}, {text: 'URAVL'}, {text: 'RICL'}, {text: 'P5/6L'}, {text: 'IL1DL'}, {text: 'PVPR'}, {text: 'IL1VL'}, {text: 'R7'}, {text: 'V4R'}, {text: 'SMDDR'}, {text: 'DVB'}, {text: 'DA8'}, {text: 'SAADL'}, {text: 'GLR'}, {text: 'SIAVR'}, {text: 'ADFL'}, {text: 'CA7'}, {text: 'PCAL'}, {text: 'IL2L'}, {text: 'DA6'}, {text: 'VB2'}, {text: 'P1/2L'}, {text: 'PCBR'}, {text: 'AVM'}, {text: 'VC5'}, {text: 'VD5'}, {text: 'AVJR'}, {text: 'VA9'}, {text: 'SMBDR'}, {text: 'ASJ'}, {text: 'Z3'}, {text: 'VC4'}, {text: 'SDQL'}, {text: 'DB7'}, {text: 'AWBR'}, {text: 'SMDVL'}, {text: 'SPVL'}, {text: 'P8'}, {text: 'RMDL'}, {text: 'Z1'}, {text: 'CA8'}, {text: 'CA4'}, {text: 'VA1'}, {text: 'P6'}, {text: 'R2AR'}, {text: 'EF4'}, {text: 'RIBL'}, {text: 'DA2'}, {text: 'IL2VL'}, {text: 'R5BL'}, {text: 'IL1DR'}, {text: 'PHAL'}, {text: 'AS3'}, {text: 'R5AL'}, {text: 'VA8'}, {text: 'URXL'}, {text: 'AVG'}, {text: 'DD4'}, {text: 'V1L'}, {text: 'AVJL'}, {text: 'R5'}, {text: 'ADLL'}, {text: 'NSMR'}, {text: 'CP8'}, {text: 'QL'}, {text: 'TR'}, {text: 'CP5'}, {text: 'AS11'}, {text: 'PVP'}, {text: 'RMEL'}, {text: 'PHCL'}, {text: 'SIBVR'}, {text: 'OLQDL'}, {text: 'Z4'}, {text: 'MCR'}, {text: 'PVWR'}, {text: 'AVHL'}, {text: 'VB3'}, {text: 'ADER'}, {text: 'EF1'}, {text: 'P9/10L'}, {text: 'R8AR'}, {text: 'AS4'}, {text: 'ADAR'}, {text: 'ADEL'}, {text: 'PVNL'}, {text: 'PVM'}, {text: 'OLQDR'}, {text: 'RMDVL'}, {text: 'ALNR'}, {text: 'BAGL'}, {text: 'CP7'}, {text: 'CEPVR'}, {text: 'ALML'}, {text: 'SIADR'}, {text: 'CEPDR'}, {text: 'GLRR'}, {text: 'QR'}, {text: 'R3'}, {text: 'AIYL'}, {text: 'URAVR'}, {text: 'V6R'}, {text: 'NSM'}, {text: 'HSNR'}, {text: 'EF3'}, {text: 'AWBL'}, {text: 'H2L'}, {text: 'E'}, {text: 'DB1'}, {text: 'SMBVL'}, {text: 'AUAL'}, {text: 'CEMDL'}, {text: 'AVDR'}, {text: 'RIGL'}, {text: 'CEPDL'}, {text: 'VD9'}, {text: 'R4'}, {text: 'AVFL'}, {text: 'MCL'}, {text: 'AS6'}, {text: 'VD1'}, {text: 'CA6'}, {text: 'RIBR'}, {text: 'URBL'}, {text: 'CEMDR'}, {text: 'V4L'}, {text: 'R7BL'}, {text: 'PVPL'}, {text: 'R1BL'}, {text: 'CANR'}, {text: 'SDQR'}, {text: 'RMFL'}, {text: 'RMER'}, {text: 'AUAR'}, {text: 'DB4'}, {text: 'ADAL'}, {text: 'VA6'}, {text: 'AIML'}, {text: 'PHBL'}, {text: 'P4'}, {text: 'SPCR'}, {text: 'GLRDL'}, {text: 'AVBR'}, {text: 'VD3'}, {text: 'AVFR'}, {text: 'PHBR'}, {text: 'GLRVL'}, {text: 'ASIR'}, {text: 'R1BR'}, {text: 'RIAR'}, {text: 'AQR'}, {text: 'R9'}, {text: 'MCM'}, {text: 'AIBR'}, {text: 'R6BR'}, {text: 'I2R'}, {text: 'R4BL'}, {text: 'P7/8L'}, {text: 'AIZR'}, {text: 'AVHR'}, {text: 'PLNL'}, {text: 'CEMVR'}, {text: 'R6'}, {text: 'AWC-OFF'}, {text: 'SMDVR'}, {text: 'FLPL'}, {text: 'RMDDR'}, {text: 'PDER'}, {text: 'PVDL'}, {text: 'IL1R'}, {text: 'AS5'}, {text: 'OLQVR'}, {text: 'AWAL'}, {text: 'VD4'}, {text: 'VD10'}, {text: 'VD7'}, {text: 'VD6'}, {text: 'EF3/4'}, {text: 'VA12'}, {text: 'HOA'}, {text: 'SM3L'}, {text: 'CA9'}, {text: 'H1R'}, {text: 'AB'}, {text: 'R5BR'}, {text: 'R3BL'}, {text: 'DA4'}, {text: 'XXXR'}, {text: 'AIAL'}, {text: 'ALA'}, {text: 'DA3'}, {text: 'SIADL'}, {text: 'R7BR'}, {text: 'RMHR'}, {text: 'R1AL'}, {text: 'SAAVR'}, {text: 'VA3'}, {text: 'RIR'}, {text: 'R1AR'}, {text: 'PVCL'}, {text: 'AIYR'}, {text: 'AVER'}, {text: 'DD5'}, {text: 'IL2R'}, {text: 'R2AL'}, {text: 'VB6'}, {text: 'ASGL'}, {text: 'CEPVL'}, {text: 'PDB'}, {text: 'R9AR'}, {text: 'RIML'}, {text: 'PVS'}, {text: 'SPDR'}, {text: 'R6BL'}, {text: 'AINL'}, {text: 'CP0'}, {text: 'V5L'}, {text: 'P9/10R'}, {text: 'AUA'}, {text: 'V2L'}, {text: 'VB7'}, {text: 'PQR'}, {text: 'AFDR'}, {text: 'PLM'}, {text: 'R8BL'}, {text: 'SAAVL'}, {text: 'RMGR'}, {text: 'AVKR'}, {text: 'RID'}, {text: 'R4BR'}, {text: 'ALMR'}, {text: 'ASJL'}];
+
+	$scope.loadTags = function($query) {
+		newNames = $scope.neuronNames.filter(function(neuron) { 
+			return (neuron.text.indexOf(($query.toUpperCase())) != -1);	
+		});
+		return newNames; 
+	}
+
+});
+</script>
+
+<div class="footer">
+  <p style="text-align:left;padding:0px">Based on <a href='http://wormbase.org'>WormBase</a> data. (Eyal Itskovits. Zaslaver Lab, 2018.)</p>
+</div>
+</body>
+</html>
+
